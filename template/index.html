@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADCAL</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">ADCAL</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#quienes">Qué es ADCAL</a></li>
+        <li><a href="#ofrecemos">Qué Ofrece</a></li>
+        <li><a href="#dirigido">A quién va dirigido</a></li>
+        <li><a href="#contacto" class="btn-nav">Trabaja con nosotros</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- HERO CON VIDEO -->
+  <section class="hero">
+
+    <!-- VIDEO DE FONDO -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="{{ url_for('static', filename='video/hero-adcal.mp4') }}" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Agricultura · Comunidad · Vida</p>
+      <h1 class="hero-title">Qué es <span>ADCAL</span></h1>
+      <p class="hero-sub">Trabaja con nosotros</p>
+      <a href="#quienes" class="hero-btn">Descubre más</a>
+    </div>
+    <div class="hero-scroll">↓</div>
+  </section>
+
+  <!-- SECCIÓN: QUÉ ES ADCAL -->
+  <section class="section section-quienes" id="quienes">
+    <div class="section-container reverse-mobile">
+      <div class="section-text fade-in">
+        <span class="section-label">Quiénes somos</span>
+        <h2>Qué es ADCAL</h2>
+        <p>ADCAL es una asociación comprometida con el desarrollo agrícola y rural sostenible. Trabajamos junto a comunidades locales para fortalecer el campo, promoviendo buenas prácticas agrícolas y el acceso a recursos de calidad.</p>
+        <p>Nuestra misión es transformar el sector agropecuario mediante la educación, la innovación y el trabajo colectivo, creando un futuro más verde y próspero para todos.</p>
+        <p>Desde nuestros inicios, hemos apoyado a cientos de familias rurales, brindando herramientas, capacitación y acompañamiento constante en sus procesos productivos.</p>
+      </div>
+      <div class="section-image fade-in">
+        <img src="{{ url_for('static', filename='image/invernadero.jpg') }}" alt="Invernadero ADCAL"
+             onerror="this.style.background='linear-gradient(135deg,#c8e6c9,#388e3c)';this.style.height='360px';this.style.display='block';this.removeAttribute('src')">
+        <div class="img-decoration"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: QUÉ OFRECE -->
+  <section class="section section-ofrece" id="ofrecemos">
+    <div class="section-container">
+      <div class="section-image fade-in">
+        <img src="{{ url_for('static', filename='image/ganado.jpg') }}" alt="Ganadería ADCAL"
+             onerror="this.style.background='linear-gradient(135deg,#dcedc8,#558b2f)';this.style.height='360px';this.style.display='block';this.removeAttribute('src')">
+        <div class="img-decoration right"></div>
+      </div>
+      <div class="section-text fade-in">
+        <span class="section-label">Nuestros servicios</span>
+        <h2>Qué Ofrece</h2>
+        <ul class="offer-list">
+          <li><span class="bullet"></span>Capacitación técnica en buenas prácticas agrícolas</li>
+          <li><span class="bullet"></span>Acceso a insumos y herramientas de calidad</li>
+          <li><span class="bullet"></span>Acompañamiento en procesos de certificación</li>
+          <li><span class="bullet"></span>Redes de comercialización y mercados locales</li>
+          <li><span class="bullet"></span>Asesoría en gestión y planificación rural</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: A QUIÉN VA DIRIGIDO -->
+  <section class="section section-dirigido" id="dirigido">
+    <div class="section-container reverse-mobile">
+      <div class="section-text fade-in">
+        <span class="section-label">Nuestra comunidad</span>
+        <h2>A quién va dirigido</h2>
+        <p>ADCAL está pensado para agricultores, ganaderos, emprendedores rurales y comunidades que buscan mejorar su calidad de vida a través del trabajo en el campo.</p>
+        <p>Atendemos tanto a productores individuales como a cooperativas y asociaciones que desean fortalecer sus capacidades y ampliar su impacto.</p>
+        <p>Si tienes pasión por la tierra y quieres crecer con apoyo real, ADCAL es tu lugar.</p>
+        <a href="#contacto" class="section-btn">Únete ahora</a>
+      </div>
+      <div class="section-image fade-in">
+        <img src="{{ url_for('static', filename='image/productos.jpg') }}" alt="Productos del campo"
+             onerror="this.style.background='linear-gradient(135deg,#f9fbe7,#9ccc65)';this.style.height='360px';this.style.display='block';this.removeAttribute('src')">
+        <div class="img-decoration"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-text white">ADCAL</span>
+        <p>Asociación para el Desarrollo del Campo y la Agricultura Local</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#quienes">Qué es ADCAL</a></li>
+          <li><a href="#ofrecemos">Qué Ofrece</a></li>
+          <li><a href="#dirigido">A quién va dirigido</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Trabaja con nosotros</h4>
+        <p>¿Quieres formar parte de ADCAL?</p>
+        <a href="mailto:contacto@adcal.org" class="footer-btn">Contáctanos</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ADCAL · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
